@@ -9,4 +9,4 @@ More about GitHub Pages: https://pages.github.com/
 * Whoever has the most experience with GitHub & Pull requests shall be the leader of this project.  They will be in charge of leading the team and teaching new members how to use Pull requests.  The leader will also be in charge of accepting commits to the Master branch. Please put it to a vote in Github.
 
 ### Message Board
-* Please feel free to post any additional suggestions here, preferably sign/date them if you can. Feel free to add anything else to this readme [SageWare, 9/8/2018]
+* Please feel free to post any additional suggestions, questions, and comment here. Preferably sign/date them if you can. Feel free to add anything else to this readme [SageWare, 9/8/2018]
