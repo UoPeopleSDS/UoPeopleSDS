@@ -1,4 +1,4 @@
-# UoPeopleSDS-Website
+# UoPeopleSDS Website
 Our first project is to create the UoPeopleSDS Website using GitHub Pages.  This is to be a great beginner friendly project, even the smallest addition can be added.  Fork this repository and get started.  
 More about GitHub Pages: https://pages.github.com/
 
