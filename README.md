@@ -26,7 +26,7 @@ $ cd /path-to-folder
 ```
 Clone the forked repository from GitHub.
 ```
-$ git clone https://github.com/yourusername/davidconoh.github.io
+$ git clone https://github.com/yourusername/UoPeopleSDS.github.io
 ```
 Navigate into the cloned repository.
 ```
@@ -74,7 +74,7 @@ This project doesn't require you running a live server on your local machine.
 
 ## Versioning
 
-We use [Git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [Git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/UoPeopleSDS/UoPeopleSDS.github.io/tags).
 
 ## Authors
 
@@ -83,7 +83,7 @@ We use [Git](https://git-scm.com/) for versioning. For the versions available, s
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/davidconoh/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
 
