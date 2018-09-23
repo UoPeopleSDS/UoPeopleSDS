@@ -6,10 +6,11 @@ import path from 'path';
  * Cleans up the output (build) directory.
  */
 async function clean() {
-    await del(['.tmp', 'build/*', '!build/.git'], { dot: true });
+    await del(['.tmp', 'build/*', '!build/.git', 'docs/*'], { dot: true });
   
-    const targetPath = path.join(__dirname, '..', 'build'); 
-    await fs.makeDir(path.join(targetPath, 'public'));
+    // TODO: When server is activated this can be uncommented.
+    // const targetPath = path.join(__dirname, '..', 'build'); 
+    // await fs.makeDir(path.join(targetPath, 'public'));
 }
 
 export default clean;

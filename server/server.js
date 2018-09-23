@@ -1,9 +1,9 @@
+import fs from 'fs';
 import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import { log2, log2_e } from './logger';
-import HttpDispatcher from '../app/utils/httpDispatcher';
 import requestLoggerMiddleware from './middlewares/requestLoggerMiddleware';
 
 log2('Initiailizing express framework');
@@ -37,15 +37,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ------------------------------------------------------------------
 let renderedPage = null;
 
-const renderPage = ((req, res) => {
-    if (renderedPage === null) {
+const renderPage = ((req, res, htmlPageFile) => {
+    if (renderedPageTemplate === null) {
         renderedPage = fs.readFileSync(
             (process.env.NODE_ENV === 'development') ?
-            './build/index.html' : 
-            path.join(__dirname, 'index.html'), 'utf8'
+            `./build/${htmlPageFile}` : 
+            /* We will never get to this point as long as are on GitHub Pages */
+            path.join(__dirname, htmlPageFile), 'utf8'
         );
     }
-    const renderedHtml = null;
+
     res.setHeader('Content-Type', 'text/html');
     res.writeHead(200);
     res.write(renderedHtml);
@@ -56,7 +57,7 @@ const renderPage = ((req, res) => {
 // Basic http(s) routes for page loading
 // ------------------------------------------------------------------
 app.get('/', (req, res) => {
-
+    renderPage(req, res, "index.html");
 });
 
 const server = app.listen(process.env.PORT || 9001, () => {

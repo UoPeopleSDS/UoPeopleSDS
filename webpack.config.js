@@ -3,16 +3,53 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
+const templates = require('./tools/templateGen').templates;
 
 const DEBUG = process.env.NODE_ENV === 'development';
+
+// Create the plugins manually since it is directly tied
+// to the template files we are creating for GitHub Pages.
+const plugins = [
+    new ExtractTextPlugin('content/css/style.css')
+];
+
+templates.forEach((element) => {
+    plugins.push(
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'docs', element.fileName),
+            hash: false,
+            filename: path.join(__dirname, 'docs', element.fileName),
+            inject: false,
+            minify: {
+                collapseWhitespace: true
+            }
+        })
+    );
+});
+
+plugins.push(
+    new CopyWebpackPlugin([
+        { from: 'content' },
+        { from: 'content/*.*' }
+    ])
+);
+
+plugins.push(
+    new webpack.DefinePlugin({
+        PRODUCTION: JSON.stringify(true),
+        "process.env": {
+            NODE_ENV: JSON.stringify("production")
+        }
+    })
+);
 
 const config = {
     entry: {
         app: ['babel-polyfill', 'isomorphic-fetch', './app/main.js']
     },
     output: {
-        path: path.resolve(__dirname, 'build', 'public'),
-        filename: DEBUG ? 'js/bundle.js' : 'js/bundle.[hash].js',
+        path: path.join(__dirname, 'docs'),
+        filename: 'content/js/bundle.js',
         publicPath: '/'
     },
     devServer: {
@@ -31,28 +68,7 @@ const config = {
             }
          ]
     },
-    plugins: [
-        new ExtractTextPlugin(DEBUG ? 'css/style.css' : 'css/style.[hash].css'),
-        new HtmlWebpackPlugin({
-            template: 'app/index.html',
-            hash: DEBUG ? false : true,
-            filename: '../index.html',
-            inject: 'body',
-            minify: {
-                collapseWhitespace: DEBUG ? false : true
-            }
-        }),
-          new CopyWebpackPlugin([
-             { from: 'app/vendor' },
-             { from: 'app/vendor/*.*' }
-         ]),
-         new webpack.DefinePlugin({
-             PRODUCTION: JSON.stringify(true),
-             "process.env": {
-                 NODE_ENV: JSON.stringify("production")
-             }
-         })  
-    ]
+    plugins: plugins
 };
 
 module.exports = config;
