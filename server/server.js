@@ -30,26 +30,17 @@ app.use((req, res, next) => {
 });
 
 log2('Making public folder acccessible');
-app.use(express.static(path.join(__dirname, 'public')));
+const staticPath = path.join(__dirname, '..', 'docs');
+app.use(express.static(staticPath));
 
 //
 // Handle rendering of base index.html page
 // ------------------------------------------------------------------
-let renderedPage = null;
-
 const renderPage = ((req, res, htmlPageFile) => {
-    if (renderedPageTemplate === null) {
-        renderedPage = fs.readFileSync(
-            (process.env.NODE_ENV === 'development') ?
-            `./build/${htmlPageFile}` : 
-            /* We will never get to this point as long as are on GitHub Pages */
-            path.join(__dirname, htmlPageFile), 'utf8'
-        );
-    }
-
+    const renderedPage = fs.readFileSync(path.join(__dirname, '..', 'docs', htmlPageFile));
     res.setHeader('Content-Type', 'text/html');
     res.writeHead(200);
-    res.write(renderedHtml);
+    res.write(renderedPage);
     res.end();
 });
 
@@ -70,10 +61,6 @@ const server = app.listen(process.env.PORT || 9001, () => {
     }
 
     log2('UoPeopleSDS Application listening at %s', `${absoluteHost}:${port}`);
-}).catch((err) => {
-    log2_e('Unable to start UoPeopleSDS Application Server');
-    log2_e(err);
-    process.exit(-1);
 });
 
 // Declare our exit handler in the event we have a

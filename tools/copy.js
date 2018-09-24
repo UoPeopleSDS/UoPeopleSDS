@@ -19,6 +19,11 @@ async function copy({ watch } = {}) {
   let robotsFilePath = path.join(targetPath, "robots.txt");
   await ncp(path.join(basePath, "robots.txt"), robotsFilePath);
 
+  // Move the content resources
+  console.log("Moving the content folder");
+  let contentFolder = path.join(targetPath, 'content');
+  await ncp(path.join(basePath, 'content'), contentFolder);
+
   // Generate the static files
   // Note: basePath parameter is actually the targetPath in this context.
   console.log('Executing the Template Generator');

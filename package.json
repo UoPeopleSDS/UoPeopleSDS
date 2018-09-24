@@ -12,7 +12,8 @@
     "clean": "babel-node tools/run clean",
     "test": "mocha \"specs/**/*.spec.js\" --require specs/setup.js --compilers js:babel-register \"specs/**/*.spec@(.js|.jsx)\"",
     "devRun": "better-npm-run devRun",
-    "prodBuild": "better-npm-run prodBuild && webpack -p --progress"
+    "prodBuild": "better-npm-run prodBuild && webpack -p --progress",
+    "liveRun": "better-npm-run liveRun"
   },
   "betterScripts": {
     "devRun": {
@@ -25,6 +26,12 @@
       "command": "babel-node tools/run build",
       "env": {
         "NODE_ENV": "production"
+      }
+    },
+    "liveRun": {
+      "command": "webpack-dev-server --hot --history-api-fallback --inline --progress --colors --host 0.0.0.0 --port 9001",
+      "env": {
+        "NODE_ENV": "development"
       }
     }
   },

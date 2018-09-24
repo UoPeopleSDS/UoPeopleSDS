@@ -21,24 +21,17 @@ templates.forEach((element) => {
             filename: path.join(__dirname, 'docs', element.fileName),
             inject: false,
             minify: {
-                collapseWhitespace: true
+                collapseWhitespace: DEBUG?false:true
             }
         })
     );
 });
 
 plugins.push(
-    new CopyWebpackPlugin([
-        { from: 'content' },
-        { from: 'content/*.*' }
-    ])
-);
-
-plugins.push(
     new webpack.DefinePlugin({
-        PRODUCTION: JSON.stringify(true),
+        PRODUCTION: JSON.stringify(DEBUG?false:true),
         "process.env": {
-            NODE_ENV: JSON.stringify("production")
+            NODE_ENV: JSON.stringify(DEBUG?"development":"production")
         }
     })
 );
