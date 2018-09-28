@@ -113,7 +113,7 @@
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
-    "mocha": "^3.2.0",
+    "mocha": "^5.2.0",
     "ncp": "^2.0.0",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.3",
