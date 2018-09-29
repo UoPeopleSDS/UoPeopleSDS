@@ -5,8 +5,14 @@ import HomePage from './pages/homePage.jsx';
 
 const DEBUG = process.env.NODE_ENV === 'development';
 
+// Handle GitHub Pages
+let BASE_PATH = window.location.pathname;
+if (BASE_PATH.endsWith('/')) {
+    BASE_PATH = BASE_PATH.substr(0, BASE_PATH.length - 1);
+}
+
 export default (
     <Router history={browserHistory}>
-        <Route path={DEBUG?"/":"/UoPeopleSDS.github.io"} component={HomePage} />
+        <Route path={DEBUG?"/":BASE_PATH} component={HomePage} />
     </Router>
 );
