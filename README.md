@@ -30,7 +30,7 @@ $ cd /path-to-folder
 ```
 Clone the forked repository from GitHub.
 ```
-$ git clone https://github.com/yourusername/UoPeopleSDS.github.io
+$ git clone https://github.com/yourusername/UoPeopleSDS
 ```
 Navigate into the cloned repository.
 ```
@@ -137,13 +137,14 @@ Another command is provided in order to make production builds which is **'npm r
 
 ## Versioning
 
-We use [Git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/UoPeopleSDS/UoPeopleSDS.github.io/tags).
+We use [Git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/UoPeopleSDS/UoPeopleSDS/tags).
 
 ## Authors
 
 * **Sage Fremont** - [GitHub](https://github.com/SageWare)
 * **David C. Onoh**  - [GitHub](https://github.com/davidconoh)
 * **Alphonso Turner (Fonzie)** - [GitHub](https://github.com/redorc)
+* **Michael Mejía Mora** - [GitHub](https://github.com/MichaelMejiaMora)
 
 ## Contributing
 
