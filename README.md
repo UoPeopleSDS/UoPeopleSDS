@@ -109,8 +109,8 @@ Another command is provided in order to make production builds which is **'npm r
 ## Understanding Project Structure
 
 ```
-| app                 <- React Site Code
-|   - components      <- Components with basic state management
+| app                 <-- React Site Code
+|   - components      <-- Components with basic state management
 |   - containers      <-- Components with advanced state management
 |   - pages           <-- Actual site pages (Home, About, etc...)
 |   - reducers        <-- Reducers used by React Redux
