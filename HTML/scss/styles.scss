@@ -1,34 +1,109 @@
-body {
-background-color: #F9F9F9;
-}
-.logo {
-  width: 150px;
-}
+// Variable overrides
+$body-bg: #F9F9F9;
+$body-color: #000;
+$font-family-sans-serif: Open Sans, sans-serif;
+
+$theme-colors: (
+  "primary": #50235d
+);
+
+// Required
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+
+// Optional
+
+// @import "tables";
+// @import "forms";
+// @import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "input-group";
+// @import "custom-forms";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "utilities";
+// @import "print";
+
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/grid";
+
+
+// Sections
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/jumbotron";
+
+// Components
+@import "bootstrap/buttons";
+@import "bootstrap/card";
+
+
+@import "bootstrap/transitions";
+@import "bootstrap/utilities";
+
 .navbar {
-  box-shadow: 0 3px 3px rgba(0,0,0,0.05);
-  height: 90px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  min-height: 80px;
+  background-color: #FFF;
 }
 
-
-.nav-item {
-  display: inline-block;
-  font-size: 1em;
-  &.active { 
-    border-bottom: 2px solid #50235d;
-    & .nav-link {
-      color: #50235d;
-    }
+.logo {
+  height: 4em;
+  padding-left: 1.5em;
+  @media screen and (min-width: 576px) {
+    padding-left: 0;
+    padding-right: 1.5em;
   }
 }
-.nav-link {
-  color: #959595;
+
+.nav-item {
+  font-size: 1em;
+  font-weight: 500;
+  &.active {    
+    & .nav-link {      
+      color: #50235d !important;
+    }
+    @media screen and (min-width: 576px) {
+      & .nav-link {      
+        border-bottom: 2px solid #50235d;
+      }      
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 0.75em;
+  }
 }
 
-
-// Primary color
-.primary {
-  color: #50235d;
+.header {
+  margin-top: 90px;
 }
-.primary-bg {
-  background-color: #50235d;
+
+.card {
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  transition: .3s;
+  &:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
 }
