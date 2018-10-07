@@ -6254,6 +6254,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .card {
+  margin-top: 1rem;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   -webkit-transition: .3s;
@@ -6263,5 +6264,76 @@ a.text-dark:hover, a.text-dark:focus {
 .card:hover {
   -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-weight: 700;
+}
+
+.section-title::before {
+  content: " ";
+  display: inline-block;
+  width: 4px;
+  height: 1rem;
+  background-color: #50235d;
+  margin-right: 0.5em;
+}
+
+.section-desc {
+  padding-left: 1rem;
+}
+
+.align-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-category {
+  line-height: 4rem;
+  font-size: 0.875rem;
+}
+
+.card-category, .card-text {
+  color: #9e9e9e;
+  font-size: 0.875rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.footer {
+  height: 90px;
+  background-color: #FFF;
+  border-top: 1px solid #EEF;
+  color: #9e9e9e;
+  padding: 1rem 0;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.footer span {
+  display: block;
+  line-height: 1.5rem;
+}
+
+.footer a {
+  font-weight: 700;
+}
+
+.footer-logo {
+  width: 65px;
+}
+
+.footer-gh {
+  font-size: 2.2rem;
+  opacity: 0.6;
 }
 /*# sourceMappingURL=styles.css.map */
