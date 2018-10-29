@@ -1,0 +1,177 @@
+// Variable overrides
+$body-bg: #F9F9F9;
+$body-color: #000;
+$font-family-sans-serif: Open Sans, sans-serif;
+
+
+
+$theme-colors: (
+  "primary": #50235d
+);
+
+// Required
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+
+// Optional
+
+// @import "tables";
+// @import "forms";
+// @import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "input-group";
+// @import "custom-forms";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "utilities";
+// @import "print";
+
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/grid";
+
+
+// Sections
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/jumbotron";
+
+// Components
+@import "bootstrap/buttons";
+@import "bootstrap/card";
+
+
+@import "bootstrap/transitions";
+@import "bootstrap/utilities";
+
+
+// Custom variables
+$primary-color: #50235d;
+$secondary-color: #9e9e9e;
+
+
+.navbar {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  min-height: 80px;
+  background-color: #FFF;
+}
+
+.logo {
+  height: 4em;
+  padding-left: 1.5em;
+  @media screen and (min-width: 576px) {
+    padding-left: 0;
+    padding-right: 1.5em;
+  }
+}
+
+.nav-item {
+  font-size: 1em;
+  font-weight: 500;
+  &.active {    
+    & .nav-link {      
+      color: #50235d !important;
+    }
+    @media screen and (min-width: 576px) {
+      & .nav-link {      
+        border-bottom: 2px solid #50235d;
+      }      
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 0.75em;
+  }
+}
+
+.header {
+  margin-top: 90px;
+}
+
+.card {
+  margin-top: 1rem;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  transition: .3s;
+  &:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+}
+
+
+.section-title {
+  font-weight: 700;
+  &::before {
+    content: " ";
+    display: inline-block;
+    width: 4px;
+    height: 1rem;
+    background-color: #50235d;
+    margin-right: 0.5em;  
+  }
+}
+
+.section-desc {
+  padding-left: 1rem;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-category {
+  line-height: 4rem;
+  font-size: 0.875rem;
+}
+.card-category, .card-text {
+  color: $secondary-color;
+  font-size: 0.875rem;
+}
+.card-title {
+  font-size: 1.5rem;
+}
+
+.footer {
+  height: 90px;
+  background-color: #FFF;
+  border-top: 1px solid #EEF;
+  color: $secondary-color;
+  padding: 1rem 0;
+  font-size: 14px;
+  margin-top: 1rem;
+  & span {
+    display: block;
+    line-height: 1.5rem;
+  }
+  & a {
+    font-weight: 700;
+  }
+}
+.footer-logo {
+  width: 65px;
+}
+.footer-gh {
+  font-size: 2.2rem;
+  opacity: 0.6;  
+}

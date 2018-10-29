@@ -15,7 +15,7 @@ Fork this repository and get started.
 
 ### Prerequisites
 
-To work on the website from your local machine, be sure you have a Versioning System installed preferably [Git](https://git-scm.com/). Also, you should have experience of Web technologies (HTML, CSS, JavaScript), a Text Editor/Web IDE, and a recent version of any popular web browser.
+To work on the website from your local machine, be sure you have a Versioning System installed preferably [Git](https://git-scm.com/). Also, you should have experience of Web technologies (HTML, CSS, JavaScript), a Text Editor/Web IDE, and a recent version of any popular web browser
 
 You will also need to have [NodeJS & NPM](https://nodejs.org/en/) installed in order to build the project and also to run it locally.
 
@@ -28,14 +28,17 @@ On your local machine, navigate to the folder you want to hold your project.
 ```
 $ cd /path-to-folder
 ```
+
 Clone the forked repository from GitHub.
 ```
 $ git clone https://github.com/yourusername/UoPeopleSDS
 ```
+
 Navigate into the cloned repository.
 ```
 $ cd project
 ```
+
 Run the following commands to install packages necessary to build and run the project.
 ```
 npm install -g npm
@@ -51,33 +54,41 @@ Create a new branch.
 ```
 $ git branch yourusername-patch-patchnumber
 ```
+
 Switch to your new branch.
 ```
 $ git checkout yourusername-patch-patchnumber
 ```
+
 Make the changes you want on your new branch and when you are done, you can verify the changes using `git status`.
 
 To commit your changes,
+
 first stage the files for commit.
 ```
 $ git add <filename1> <filename2>
 ```
+
 Verify that the files have been staged.
 ```
 $ git status
 ```
+
 Then make your commit.
 ```
 $ git commit -m 'commit message'
 ```
+
 To merge your modifications from the development branch, first switch to the `master` branch.
 ```
 $ git checkout master
 ```
+
 Merge the development branch with the `master` branch.
 ```
 $ git merge yourusername-patch-patchnumber
 ```
+
 Finally, push your changes to your GitHub repository.
 ```
 $ git push origin master
@@ -138,11 +149,20 @@ Another command is provided in order to make production builds which is **'npm r
 ## Versioning
 
 We use [Git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/UoPeopleSDS/UoPeopleSDS/tags).
+This project doesn't require you running a live server on your local machine.
+
+## Versioning
+
+We use [Git](https://git-scm.com/) for versioning. For the versions available, see the [tags on this repository](https://github.com/UoPeopleSDS/UoPeopleSDS.github.io/tags).
+
 
 ## Authors
 
-* **Sage Fremont** - [GitHub](https://github.com/SageWare)
-* **David C. Onoh**  - [GitHub](https://github.com/davidconoh)
+* **Sage Fremont** - [SageWare](https://github.com/SageWare)
+* **David C. Onoh**  - [davidconoh](https://github.com/davidconoh)
+
+## Maintainers
+
 * **Alphonso Turner (Fonzie)** - [GitHub](https://github.com/redorc)
 * **Michael Mejía Mora** - [GitHub](https://github.com/MichaelMejiaMora)
 
@@ -159,7 +179,8 @@ This project is licensed under the GNU Gneral Public License, Version 3 - see th
 * [University of the People](http://uopeople.edu/)
 * [GitHub Pages](http://pages.github.com/)
 
-## Message Board
+## Signature Board
+
 Please feel free to post any additional suggestions, questions, and comment here. Preferably sign/date them if you can. Feel free to add anything else to this readme.
 * [SageWare](https://github.com/SageWare), 9/8/2018
 * [David C.](https://github.com/davidconoh), 9/12/2018
