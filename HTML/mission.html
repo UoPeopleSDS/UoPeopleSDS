@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,13 @@
   <!-- Fonts and styles -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="./scss/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
   <nav class="navbar navbar-light navbar-expand-sm fixed-top">
     <div class="container">
@@ -21,33 +25,94 @@
       <a class="navbar-brand mr-auto" href="#">
         <img class="logo" src="./img/logo.png" alt="UoPeopleSDS logo">
       </a>
-        <div class="collapse navbar-collapse" id="Navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-            <li class="nav-item active"><a class="nav-link" href="#">MISSION</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">NEWS</a></li>
-            <li class="nav-item"><a class="nav-link" href="events.html">EVENTS</a></li>
-          </ul>
-        </div>
-        
+      <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#">MISSION</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">NEWS</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">EVENTS</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
+  <!-- Breadcrumb bar-->
+
+  <!-- <nav aria-label="breadcrumb" class="bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 title-container">
+            <h4>Our Mission</h4>
+        </div>
+        <nav aria-label="breadcrumb" class="col-12 col-md-6 breadcrumb-container">
+            <ol class="breadcrumb bg-primary">
+              <li class="breadcrumb-item">
+                <a href="index.html" class="breadcrumb-link"><small>Inicio</small></a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                  <a href="#" class="breadcrumb-link current"><small>Our Mission</small></a>
+              </li>
+            </ol>
+          </nav>
+      </div>
+    </div>
+  </nav> -->
+
+  <main class="container main">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <img class="card-img-top mission-img" src="https://picsum.photos/1300/400" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Who we are</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <h1 class="card-title">Our Mission Statement</h1>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, consectetur
+              dolorem quas voluptatibus possimus error autem hic doloremque quo voluptates laborum unde obcaecati ad
+              beatae accusamus aspernatur ipsa! Necessitatibus, velit?</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, consectetur
+              dolorem quas voluptatibus possimus error autem hic doloremque quo voluptates laborum unde obcaecati ad
+              beatae accusamus aspernatur ipsa! Necessitatibus, velit?</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, consectetur
+              dolorem quas voluptatibus possimus error autem hic doloremque quo voluptates laborum unde obcaecati ad
+              beatae accusamus aspernatur ipsa! Necessitatibus, velit?</p>
+
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-            <p>Code licensed under an MIT-style License. Please contribute.</p>   
-        </div>           
+        <div class="col-2 align-right">
+          <img class="footer-logo" src="img/logo.png" alt="">
+        </div>
+        <div class="col-8">
+          <span>Made with <i class="fas fa-heart"></i> and mantained by the <a href="https://github.com/orgs/UoPeopleSDS/people">core
+              team</a> with the help of <a href="https://github.com/UoPeopleSDS/UoPeopleSDS/graphs/contributors">our
+              contributors</a>.</span>
+          <span>Code licensed under <a href="https://github.com/UoPeopleSDS/UoPeopleSDS/blob/master/LICENSE">GNU GPLv3</a>.
+            Please <a href="https://github.com/UoPeopleSDS/UoPeopleSDS/blob/master/CONTRIBUTING.md">contribute</a>.</span>
+        </div>
+        <div class="col-2 align-right">
+          <a href="https://github.com/UoPeopleSDS"><i class="fab fa-github footer-gh"></i></a>
+        </div>
       </div>
     </div>
-    
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
