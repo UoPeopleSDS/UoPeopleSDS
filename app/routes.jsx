@@ -12,7 +12,7 @@ if (BASE_PATH.endsWith('/')) {
 }
 
 export default (
-    <Router history={browserHistory}>
-        <Route path={DEBUG?"/":BASE_PATH} component={HomePage} />
+    <Router history={browserHistory}>    
+    <Route path={DEBUG?"/":BASE_PATH} component={HomePage} />
     </Router>
 );

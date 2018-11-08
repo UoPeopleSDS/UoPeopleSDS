@@ -1,26 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Navcontent from './navContent';
+import MainContent from './MainContent';
+import FooterContent from './FooterContent';
 
-export default class HomePage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+class HomePage extends Component {
     render() {
         return (
-            <main>
-                <div className="container">
-                    <div className="text-center mt-5">
-                        <img src='content/resources/UoPeopleSDS.png' />
-                        <p className="mt-2 text-bold">
-                            UoPeople Student Developer Society
-                        </p>
-                        <p className="mt-1">
-                            What do you want to develop?
-                        </p>
-                    </div>
-                </div>
-            </main>
+            <div>
+                <Navcontent />
+                <MainContent />
+                <FooterContent />
+            </div>
         );
     }
 }
+
+export default HomePage;

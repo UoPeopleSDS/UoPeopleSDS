@@ -49,6 +49,13 @@ npm install -g babel-cli
 
 npm install                 
     - Installs all required production and development packages defined in the package.json file located at the root of our project.
+
+npm run devRun
+    - builds project.
+
+npm run liveRun
+    - runs web pack server on localhost 9001,
+    you need to copy/paste this into your browser - http://localhost:9001/ since it wont automatically starts.
 ```
 Create a new branch.
 ```
