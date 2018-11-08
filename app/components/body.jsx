@@ -57,7 +57,6 @@ export default class BodyComponent extends React.Component {
                 </div>
               </div>
             </section>
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             <section className="row">
               <div className="col-12">
                 <div className="card">
