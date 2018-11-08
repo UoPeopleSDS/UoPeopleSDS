@@ -6,6 +6,19 @@ export default class HeaderComponent extends React.Component {
 }
     render() {
         return (
+          <div>
+          <header class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <h1>Hello World!</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ab impedit porro corrupti vero cumque modi
+            rem tempora voluptatem et libero magnam quia architecto, est rerum, dolorem debitis beatae officiis!</p>
+          <button class="btn btn-primary">CALL TO ACTION</button>
+        </div>
+      </div>
+    </div>
+  </header>
             <nav className="navbar navbar-light navbar-expand-sm fixed-top">
             <div className="container">
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -25,6 +38,7 @@ export default class HeaderComponent extends React.Component {
               </div>
             </div>
           </nav>
+          </div>
         );
     }
 }
