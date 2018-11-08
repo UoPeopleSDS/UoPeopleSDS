@@ -1,26 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import HeaderComponent from '../components/header.jsx';
+import BodyContent from '../components/body.jsx';
+import FooterContent from '../components/footer.jsx';
 
-export default class HomePage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+export default class  HomePage extends React.Component {
     render() {
         return (
-            <main>
-                <div className="container">
-                    <div className="text-center mt-5">
-                        <img src='content/resources/UoPeopleSDS.png' />
-                        <p className="mt-2 text-bold">
-                            UoPeople Student Developer Society
-                        </p>
-                        <p className="mt-1">
-                            What do you want to develop?
-                        </p>
-                    </div>
-                </div>
-            </main>
+            <div className="HomePage">
+                <HeaderComponent />
+                <BodyContent />
+                <FooterContent />
+            </div>
         );
     }
 }
