@@ -11,7 +11,7 @@ export default class FooterComponent extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-2 align-right">
-                  <img className="footer-logo" src="../../content/resources/img/logo.png" alt=""></img>
+                  <img className="footer-logo" src="../../HTML/img/logo.png" alt=""></img>
                 </div>
                 <div className="col-8">
                   <span>Made with <i className="fas fa-heart"></i> and mantained by the <a href="https://github.com/orgs/UoPeopleSDS/people">core
