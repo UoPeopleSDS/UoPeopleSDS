@@ -25,7 +25,7 @@ export default class HeaderComponent extends React.Component {
                 <span className="navbar-toggler-icon"></span>
               </button>
               <a className="navbar-brand mr-auto" href="#">
-                <img className="logo" src="content\resources\logo.png" alt="UoPeopleSDS logo"></img>
+                <img className="logo" src="content/resources/logo.png" alt="UoPeopleSDS logo"></img>
                 </a>
               <div className="collapse navbar-collapse" id="Navbar">
                 <ul className="navbar-nav ml-auto">
