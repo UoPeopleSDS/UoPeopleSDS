@@ -2,6 +2,9 @@ import React from 'react';
 
 
 export default class FooterComponent extends React.Component {
+  constructor(props) {
+    super(props);
+}
     render() {
         return (
             <footer className="footer">

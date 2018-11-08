@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default class BodyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+}
     render() {
         return (
             <main className="container main">
