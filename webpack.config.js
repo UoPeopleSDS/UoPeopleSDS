@@ -17,9 +17,9 @@ templates.forEach((element) => {
     plugins.push(
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'docs', element.fileName),
-            hash: false,
+            hash: true,
             filename: path.join(__dirname, 'docs', element.fileName),
-            inject: false,
+            inject: true,
             minify: {
                 collapseWhitespace: DEBUG?false:true
             }
