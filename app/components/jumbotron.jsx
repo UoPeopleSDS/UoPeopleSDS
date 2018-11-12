@@ -6,6 +6,9 @@ export default class JumbotronComponent extends React.Component {
   }
 
   render() {
+    // TODO: Will this component be used elsewhere besides the homepage?
+    // If so, then consider making this capable of receiving its content from the
+    // declaring component.
     return (
       <header className='jumbotron'>
         <div className='container'>
