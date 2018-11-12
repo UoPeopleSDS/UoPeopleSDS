@@ -1,6 +1,6 @@
 import React from 'react'
 import NavbarComponent from '../components/navbar.jsx'
-import BodyContent from '../components/body.jsx'
+import BodyContent from '../components/homepage/body.jsx'
 import FooterContent from '../components/footer.jsx'
 import JumbotronComponent from '../components/jumbotron.jsx'
 

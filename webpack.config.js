@@ -1,3 +1,4 @@
+const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -14,17 +15,22 @@ const plugins = [
 ];
 
 templates.forEach((element) => {
-    plugins.push(
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'docs', element.fileName),
-            hash: false,
-            filename: path.join(__dirname, 'docs', element.fileName),
-            inject: false,
-            minify: {
-                collapseWhitespace: DEBUG?false:true
-            }
-        })
-    );
+    // Since HtmlWebpackPlugin is stupid we need to tell it to generate only once.
+    const filePath = path.join(__dirname, 'docs', element.fileName);
+    const fileContents = fs.readFileSync(filePath);
+    if (fileContents.indexOf('bundle.js') == -1) {
+        plugins.push(
+            new HtmlWebpackPlugin({
+                hash: true,
+                template: filePath,
+                filename: filePath,
+                inject: true,
+                minify: {
+                    collapseWhitespace: DEBUG ? false : true
+                }
+            })
+        );
+    }
 });
 
 plugins.push(
@@ -42,8 +48,7 @@ const config = {
     },
     output: {
         path: path.join(__dirname, 'docs'),
-        filename: 'content/js/bundle.js',
-        publicPath: '/'
+        filename: 'content/js/bundle.js'
     },
     devServer: {
         inline: true,
