@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default class NavbarComponent extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
-  render () {
+
+  render() {
     return (
       <nav className='navbar navbar-light navbar-expand-sm fixed-top'>
         <div className='container'>
@@ -25,6 +26,6 @@ export default class NavbarComponent extends React.Component {
           </div>
         </div>
       </nav>
-    )
+    );
   }
 }

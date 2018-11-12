@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default class JumbotronComponent extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
-  render () {
+
+  render() {
     return (
       <header className='jumbotron'>
         <div className='container'>

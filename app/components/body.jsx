@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default class BodyComponent extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-}
-  render () {
+  }
+
+  render() {
     return (
       <main className='container main'>
         <section className='row'>
@@ -19,7 +20,7 @@ export default class BodyComponent extends React.Component {
             <button className='btn btn-outline-primary'>SEE ALL</button>
           </div>
         </section>
-              <section className='row'>
+        <section className='row'>
           <div className='col-12 col-sm-6 col-lg-4'>
             <div className='card'>
               <img src='https://picsum.photos/200/120' alt='' className='card-img-top' />
@@ -27,7 +28,7 @@ export default class BodyComponent extends React.Component {
                 <a className='card-category' href='#'>Project category</a>
                 <h5 className='card-title'>AMAZING PROJECT NAME</h5>
                 <p className='card-text'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
               </div>
             </div>
@@ -39,7 +40,7 @@ export default class BodyComponent extends React.Component {
                 <small className='card-category'>Project category</small>
                 <h4 className='card-title'>AMAZING PROJECT NAME</h4>
                 <p className='card-text'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
               </div>
             </div>
@@ -51,7 +52,7 @@ export default class BodyComponent extends React.Component {
                 <small className='card-category'>Project category</small>
                 <h4 className='card-title'>AMAZING PROJECT NAME</h4>
                 <p className='card-text'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
               </div>
             </div>
@@ -62,10 +63,10 @@ export default class BodyComponent extends React.Component {
             <div className='card'>
               <div className='row'>
                 <div className='col-7'>
-                      Content 1
+                  Content 1
                 </div>
                 <div className='col-5'>
-                      Content 2
+                  Content 2
                 </div>
               </div>
             </div>
@@ -78,8 +79,8 @@ export default class BodyComponent extends React.Component {
                 <h5 className='section-title'>OUR MISSION</h5>
                 <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
                 <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente unde laboriosam tempore est minima
-                      tempora possimus cupiditate culpa!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente unde laboriosam tempore est minima
+                  tempora possimus cupiditate culpa!
                 </p>
                 <button className='btn btn-primary'>GO SOMEWHERE</button>
               </div>
@@ -90,7 +91,7 @@ export default class BodyComponent extends React.Component {
                 <small className='card-category'>Project category</small>
                 <h4 className='card-title'>AMAZING PROJECT NAME</h4>
                 <p className='card-text'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
               </div>
             </div>
@@ -100,13 +101,13 @@ export default class BodyComponent extends React.Component {
                 <small className='card-category'>Project category</small>
                 <h4 className='card-title'>AMAZING PROJECT NAME</h4>
                 <p className='card-text'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
               </div>
             </div>
           </div>
         </section>
       </main>
-    )
-    }
+    );
+  }
 }

@@ -5,10 +5,11 @@ import FooterContent from '../components/footer.jsx'
 import JumbotronComponent from '../components/jumbotron.jsx'
 
 export default class HomePage extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
-  render () {
+
+  render() {
     return (
       <div className='HomePage'>
         <NavbarComponent />
@@ -16,6 +17,6 @@ export default class HomePage extends React.Component {
         <BodyContent />
         <FooterContent />
       </div>
-    )
+    );
   }
 }
