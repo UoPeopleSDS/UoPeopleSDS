@@ -1,8 +1,10 @@
 # UoPeopleSDS Website
+
 Our first project is to create the UoPeopleSDS Website using GitHub Pages.  This is to be a great beginner friendly project, even the smallest addition can be added.  Fork this repository and get started.  
 More about GitHub Pages: https://pages.github.com/
 
 ## Rules
+
 * Use Pull requests, do not commit to the Master branch or we risk running into conflicting commits.  
 * Changes must be confirmed.
 * Please update this readme as needed
@@ -20,6 +22,7 @@ To work on the website from your local machine, be sure you have a Versioning Sy
 You will also need to have [NodeJS & NPM](https://nodejs.org/en/) installed in order to build the project and also to run it locally.
 
 ### Installing
+
 **Note:** *The dollar sign '$' represents input interface of Mac and Linux machines. Windows users may consider installing Git-Bash.*
 
 Install NodeJS on your machine from the link provided above and then following the steps below.
@@ -44,10 +47,13 @@ Run the following commands to install packages necessary to build and run the pr
 npm install -g npm
     - Installs NPM globally (via -g switch) and to latest version.
 
-npm install -g babel-cli    
+npm install -g babel-cli
     - Installs Babel CLI to translate JavaScript from ES6 into ES5.
 
-npm install                 
+npm install -g jshint
+    - Installs JSHint, a flexible linting tool for detecting convention errors in JavaScript code.
+
+npm install
     - Installs all required production and development packages defined in the package.json file located at the root of our project.
 
 npm run devRun
@@ -67,9 +73,20 @@ Switch to your new branch.
 $ git checkout yourusername-patch-patchnumber
 ```
 
-Make the changes you want on your new branch and when you are done, you can verify the changes using `git status`.
+Make the changes you want on your new branch and when you are done. After editing any JS files, run
+```
+jshint <fileName>
+```
+(This helps to verify that your code follows the coding convention defined in the `.jshintrc` file.)
 
-To commit your changes,
+When your code passes the tests, you can then add the edited files to the staging area using
+```
+git add <fileName1> <fileName2>
+```
+
+Verify the changes have beed added using `git status`.
+
+To commit your changes
 
 first stage the files for commit.
 ```
@@ -86,7 +103,14 @@ Then make your commit.
 $ git commit -m 'commit message'
 ```
 
-To merge your modifications from the development branch, first switch to the `master` branch.
+Finally, push your changes to your GitHub repository.
+```
+$ git push origin master
+```
+
+Feel free to merge your modifications with your `master` branch.
+
+To do this, first switch to the `master` branch.
 ```
 $ git checkout master
 ```
@@ -96,23 +120,23 @@ Merge the development branch with the `master` branch.
 $ git merge yourusername-patch-patchnumber
 ```
 
-Finally, push your changes to your GitHub repository.
-```
-$ git push origin master
-```
-
 ## Deployment
 
 ### Command line tools recommended to run build commands
 
 **On Windows**
+
 * [Git](https://git-scm.com/) - Also known as Git-Bash, this is a linux style command line for windows which we use on Windows.
 
 **On Mac / Linux**
+
 * Terminal is a built in command line processor for Mac OSX and Linux, use this on those platforms.
 
 **Platform Agnostic Tools**
+
 * [Visual Studio Code](https://code.visualstudio.com/) - Cross-Platform code editor with intellisense and many other plugins to accelerate development on NodeJS projects. This is what we use in order to write code and it conveniently comes with a built in command line terminal that you can use inside the editor. This command line terminal utilizes whatever the default underlying command line processor is on your platform.
+
+* [JSHint](https://jshint.com) - JSHint is a community-driven tool that detects errors and potential problems in JavaScript code. Since JSHint is so flexible, you can easily adjust it in the environment you expect your code to execute. JSHint is open source and will always stay this way. You can easily install it as a commandline tool using `npm` or as a plugin for your favourite text editor.
 
 This project runs inside of GitHub Pages which provides its own hosting of files generated inside of our /docs folder. This however does not solve the problem for local development where you want to see how your code changes look before committing.
 
@@ -147,7 +171,7 @@ Another command is provided in order to make production builds which is **'npm r
 |   - lib             <-- Helper lib methods for the build process
 | .babelrc            <-- Defines settings for babel build process
 | .gitignore          <-- Tells git what files to ignore when adding files to commit
-| .jshintrc           <-- Tells VS Code JS Hint system what version of JS we are using
+| .jshintrc           <-- Defines rules and coding convention for working on JS files
 | package.json        <-- Defines name, engine, dependencies and information on project
 | server.webpack.config.js      <-- Defines webpack configuration for building server-side code.
 | webpack.config.js   <-- Defines webpack configuration for building client-side code.
