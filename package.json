@@ -72,7 +72,7 @@
     "dotenv": "^4.0.0",
     "fetch": "^1.1.0",
     "graceful-ncp": "^3.0.0",
-    "moment": "^2.21.0",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.14",
     "path": "^0.12.7",
     "body-parser": "^1.17.1",
