@@ -73,7 +73,7 @@
     "fetch": "^1.1.0",
     "graceful-ncp": "^3.0.0",
     "moment": "^2.21.0",
-    "moment-timezone": "^0.5.14",
+    "moment-timezone": "^0.5.35",
     "path": "^0.12.7",
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
